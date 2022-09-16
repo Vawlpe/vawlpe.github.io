@@ -29,9 +29,6 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
 
-      - name: Enter source dir
-        run: cd src
-
       - name: Cache node_modules 📦
         uses: actions/cache@v2.1.4
         with:
@@ -41,7 +38,10 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm install
+        run: |
+          cd src
+          ls -al
+          npm install
 
       - name: Run linter 👀
         run: npm run lint
