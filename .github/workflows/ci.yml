@@ -40,11 +40,14 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: |
           cd src
-          ls -al
           npm install
 
       - name: Run linter 👀
-        run: npm run lint
+        run: |
+          cd src
+          npm run lint
 
       - name: Run tests 🧪
-        run: npm run test
+        run: |
+          cd src
+          npm run test
