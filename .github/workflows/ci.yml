@@ -41,7 +41,9 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm ci --prefer-offline --no-audit
+        run: |
+          ls | grep package-lock
+          npm ci
 
       - name: Run linter 👀
         run: npm run lint
