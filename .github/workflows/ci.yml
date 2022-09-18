@@ -47,7 +47,7 @@ jobs:
           cd src
           npm run lint
 
-      - name: Run tests 🧪
-        run: |
-          cd src
-          npm run test
+      # - name: Run tests 🧪
+      #   run: |
+      #     cd src
+      #     npm run test
