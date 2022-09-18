@@ -34,7 +34,11 @@ export default defineNuxtConfig({
         // https://go.nuxtjs.dev/stylelint
         '@nuxtjs/stylelint-module',
         // https://go.nuxtjs.dev/tailwindcss
-        '@nuxtjs/tailwindcss',
+        '@nuxtjs/tailwindcss'
+    ],
+
+    // Modules
+    modules: [
         // https://color-mode.nuxtjs.org/
         '@nuxtjs/color-mode'
     ],
