@@ -82,10 +82,10 @@
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-blue-400 hover:scale-110 transition-all duration-3"
       />
       <IconSolidBash
-        class="w-[3.5rem] py-[0.65rem] mr-4 hover:scale-110 transition-all duration-3"
+        class="w-[3.5rem] py-[0.65rem] mr-4 hover:scale-110 transition-all duration-3 grayscale hover:grayscale-0"
       />
       <IconSolidGhidra
-        class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-red-500 hover:scale-110 transition-all duration-3"
+        class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-red-500 hover:scale-110 transition-all duration-3 grayscale hover:grayscale-0"
       />
       <IconSolidVsc
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-blue-500 hover:scale-110 transition-all duration-3"

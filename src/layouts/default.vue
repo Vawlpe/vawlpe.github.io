@@ -2,7 +2,7 @@
   <div class="layout w-screen h-screen">
     <MainNavbar />
     <slot />
-    <MainFooter class="w-full" />
+    <MainFooter class="w-full fixed bottom-0" />
   </div>
 </template>
 

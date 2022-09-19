@@ -41,6 +41,8 @@ export default defineNuxtConfig({
   modules: [
     // https://color-mode.nuxtjs.org/
     '@nuxtjs/color-mode',
+    // https://vueuse.org/
+    '@vueuse/nuxt',
   ],
 
   // Module configs
