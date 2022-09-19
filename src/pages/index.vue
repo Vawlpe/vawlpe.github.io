@@ -100,7 +100,7 @@ const projects = [
   },
   {
     name: 'Hgreet',
-    bgi: 'url(@/assets/lock.jpeg)',
+    bgi: 'url(/lock.jpeg)',
     tc: '#ffffff',
     desc: "Haskell package to facilitate interaction with the unix greetd daemon trough it's unix-socket-based IPC to authenticate a user on system start-up",
     links: [
@@ -109,19 +109,19 @@ const projects = [
     ],
   },
   {
-    bgi: 'url(@/assets/qimguin.png)',
+    bgi: 'url(/qimguin.png)',
     links: ['https://github.com/Vawlpe/QuickImGui.NET'],
   },
   {
     name: 'My Obsidian Workspace',
-    bgi: 'url(assets/hexagons.jpeg)',
+    bgi: 'url(/hexagons.jpeg)',
     tc: '#ffffff',
     desc: 'An customized and organized workspace with node-graph, kanban boards, notes, databases, diagrams, etc...',
     links: ['https://github.com/Vawlpe/HazelObsidian'],
   },
   {
     name: 'ModTaker',
-    bgi: 'url(@/assets/helltaker.jpeg)',
+    bgi: 'url(/helltaker.jpeg)',
     tc: '#ffffff',
     desc: 'Basic modloader for Helltaker, includes modding API with event hooks, custom UI, clean dialog format, & various asset handling utilities out of the box',
     links: ['https://github.com/Vawlpe/ModTaker'],

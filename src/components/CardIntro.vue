@@ -3,7 +3,7 @@
     class="introBox flex flex-row rounded-2xl bg-slate-200 dark:bg-slate-800 w-full hover:scale-105 transition-all duration-3 overflow-hidden"
   >
     <img
-      src="@/assets/pfp.png"
+      src="/pfp.png"
       class="introImg border border-8 hover:border-0 border-violet-400 rounded-[1rem_50%_50%_1rem] hover:rounded-2xl hover:scale-[1.075] transition-all duration-3"
     />
     <div class="introTxt px-5 w-fit text-[0.95rem]">
