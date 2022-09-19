@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
-    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .stylelintignore",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
     "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix && npm run lint:style -- --fix"
