@@ -100,7 +100,7 @@ const projects = [
   },
   {
     name: 'Hgreet',
-    bgi: 'url(assets/lock.jpeg)',
+    bgi: 'url(@/assets/lock.jpeg)',
     tc: '#ffffff',
     desc: "Haskell package to facilitate interaction with the unix greetd daemon trough it's unix-socket-based IPC to authenticate a user on system start-up",
     links: [
@@ -109,7 +109,7 @@ const projects = [
     ],
   },
   {
-    bgi: 'url(assets/qimguin.png)',
+    bgi: 'url(@/assets/qimguin.png)',
     links: ['https://github.com/Vawlpe/QuickImGui.NET'],
   },
   {
@@ -121,7 +121,7 @@ const projects = [
   },
   {
     name: 'ModTaker',
-    bgi: 'url(assets/helltaker.jpeg)',
+    bgi: 'url(@/assets/helltaker.jpeg)',
     tc: '#ffffff',
     desc: 'Basic modloader for Helltaker, includes modding API with event hooks, custom UI, clean dialog format, & various asset handling utilities out of the box',
     links: ['https://github.com/Vawlpe/ModTaker'],
