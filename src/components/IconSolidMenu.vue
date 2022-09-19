@@ -5,7 +5,6 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 56 56"
     fill="currentColor"
-    className="w-6 h-6"
   >
     <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <path
