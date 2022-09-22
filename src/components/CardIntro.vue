@@ -76,6 +76,9 @@ import { ISDiscord } from './Icons/Solid'
   > .PfpImg {
     @media (min-width: 667px) {
       display: block;
+      height: 15.25rem;
+    }
+    @media (min-width: 1277px) {
       height: 11rem;
     }
   }
