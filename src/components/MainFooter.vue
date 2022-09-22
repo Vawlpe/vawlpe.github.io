@@ -11,25 +11,27 @@
         target="_blank"
         class="d-icon hover:text-violet-400 hover:scale-110 transition-all duration-300 w-6 max-w-6"
       >
-        <IconSolidGithub />
+        <ISGithub />
       </NuxtLink>
       <NuxtLink
         to="https://www.linkedin.com/in/david-imre-a20301234/"
         target="_blank"
         class="d-icon hover:text-violet-400 hover:scale-110 transition-all duration-300 w-7 max-w-72"
       >
-        <IconSolidLinkedIn />
+        <ISLinkedIn />
       </NuxtLink>
       <NuxtLink
         to="https://stackoverflow.com/users/11878103/vawlpe"
         target="_blank"
         class="d-icon hover:text-violet-400 hover:scale-110 transition-all duration-300 w-5 max-w-5"
       >
-        <IconSolidStackOverflow />
+        <ISStackOverflow />
       </NuxtLink>
     </div>
     <p>Made with 💜 by Hazel (Vawlpe)</p>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ISGithub, ISLinkedIn, ISStackOverflow } from '@/components/Icons/Solid'
+</script>

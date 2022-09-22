@@ -31,7 +31,7 @@
       </aside>
     </div>
     <hr class="mt-3" />
-    <div class="mb-20 projects flex flex-col items-center">
+    <section class="mb-20 projects flex flex-col items-center">
       <h2 class="text-3xl pt-6 pb-1">Projects</h2>
       <Carousel dir="ltr" :items-to-show="carouselIts()" class="my-4 w-full">
         <Slide
@@ -54,7 +54,7 @@
               :to="p.links[0]"
               target="_blank"
             >
-              <IconSolidGithub
+              <ISGithub
                 class="w-12 hover:text-violet-400 hover:scale-[110%] transition-all duration-300"
               />
             </NuxtLink>
@@ -64,8 +64,8 @@
               :to="l"
               target="_blank"
             >
-              <IconSolidMenu
-                class="w-10 hover:text-violet-400 hover:scale-[110%] transition-all duration-300"
+              <IS3Dot
+                class="w-12 hover:text-violet-400 hover:scale-[110%] transition-all duration-300"
               />
             </NuxtLink>
           </div>
@@ -75,13 +75,14 @@
           <Pagination />
         </template>
       </Carousel>
-    </div>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { ISGithub, IS3Dot } from '~~/components/Icons/Solid'
 
 const carouselIts = () =>
   useMediaQuery('(max-width: 666px)')
