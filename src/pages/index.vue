@@ -36,10 +36,12 @@
       <Carousel dir="ltr" :items-to-show="carouselIts()" class="my-4 w-full">
         <Slide
           v-for="p in projects"
-          :key="p.name"
+          :key="p.name ? p.name : projDefault.name"
           :style="{
-            backgroundImage: `${p.bgi}`,
-            color: p.tc,
+            color: p.tc ? p.tc : projDefault.tc,
+            backgroundImage: p.bgi ? p.bgi : projDefault.bgi,
+            backgroundSize: p.bgs ? p.bgs : projDefault.bgs,
+            backgroundPosition: p.bgp ? p.bgp : projDefault.bgp,
           }"
         >
           <div>
@@ -91,7 +93,25 @@ const carouselIts = () =>
     ? 2
     : 3
 
-const projects = [
+const projDefault = {
+  name: 'NAME',
+  desc: 'DESCRIPTION',
+  bgi: '',
+  bgs: 'cover',
+  bgp: 'center',
+  tc: '#fff',
+  links: [],
+}
+
+const projects: {
+  name?: string
+  desc?: string
+  bgi?: string
+  bgs?: string
+  bgp?: string
+  tc?: string
+  links?: string[]
+}[] = [
   {
     bgi: 'url(https://github.com/RetroMole/MOLE/blob/Old-2022/01/03/res/banner.png?raw=true)',
     links: ['https://github.com/RetroMole'],
@@ -99,7 +119,6 @@ const projects = [
   {
     name: 'Hgreet',
     bgi: 'url(/lock.jpeg)',
-    tc: '#ffffff',
     desc: "Haskell package to facilitate interaction with the unix greetd daemon trough it's unix-socket-based IPC to authenticate a user on system start-up",
     links: [
       'https://github.com/Vawlpe/HGreet',
@@ -108,19 +127,19 @@ const projects = [
   },
   {
     bgi: 'url(/qimguin.png)',
+    bgs: 'contain',
+    bgp: 'center top',
     links: ['https://github.com/Vawlpe/QuickImGui.NET'],
   },
   {
     name: 'My Obsidian Workspace',
     bgi: 'url(/hexagons.jpeg)',
-    tc: '#ffffff',
     desc: 'An customized and organized workspace with node-graph, kanban boards, notes, databases, diagrams, etc...',
     links: ['https://github.com/Vawlpe/HazelObsidian'],
   },
   {
     name: 'ModTaker',
     bgi: 'url(/helltaker.jpeg)',
-    tc: '#ffffff',
     desc: 'Basic modloader for Helltaker, includes modding API with event hooks, custom UI, clean dialog format, & various asset handling utilities out of the box',
     links: ['https://github.com/Vawlpe/ModTaker'],
   },
@@ -137,14 +156,11 @@ const projects = [
   flex-direction: row;
   align-items: flex-start;
   background-color: #e2e8f0;
-  background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
   transition: all;
   transition-duration: 300ms;
   &:hover {
     scale: 1.04;
-    border-radius: 10%;
   }
   @media (min-width: 1151px) {
     width: 33% !important;

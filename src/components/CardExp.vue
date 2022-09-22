@@ -4,7 +4,7 @@
   >
     <p class="flex flex-col items-center text-3xl mr-6">Experience</p>
     <div
-      class="grid grid-cols-7 justify-items-start items-center content-center pl-3"
+      class="grid grid-cols-4 sm:grid-cols-7 gap-x-8 justify-items-start items-center content-center pl-3"
     >
       <ISJavascript
         class="w-[3.8rem] pt-[0.65rem] hover:text-yellow-300 hover:scale-110 transition-all duration-3"

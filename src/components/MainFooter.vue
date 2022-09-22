@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[5rem] footer flex flex-row justify-evenly items-center bg-gray-200 dark:bg-zinc-900 text-gray-400 dark:text-gray-600"
+    class="h-[5rem] footer flex flex-row justify-evenly items-center bg-gray-200 dark:bg-zinc-900 text-gray-400 dark:text-gray-600 transition-colors duration-300 text-xs sm:text-lg"
   >
     <NuxtLink to="mailto:vawlpe(at)gmail(dot)com" target="_blank"
       >vawlpe(at)gmail(dot)com</NuxtLink

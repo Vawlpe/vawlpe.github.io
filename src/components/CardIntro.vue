@@ -2,14 +2,14 @@
   <div>
     <img
       src="/pfp.png"
-      class="out PfpImg border border-8 hover:border-0 border-violet-400 rounded-2xl hover:scale-[1.075] transition-all duration-3"
+      class="PfpImg border border-8 hover:border-0 border-violet-400 rounded-2xl hover:scale-[1.075] transition-all duration-3"
     />
     <div
       class="introCard flex flex-row rounded-2xl bg-slate-200 dark:bg-slate-800 w-full hover:scale-105 transition-all duration-3 overflow-hidden mt-4"
     >
       <img
         src="/pfp.png"
-        class="in PfpImg border-8 hover:border-0 border-violet-400 rounded-[1rem_50%_50%_1rem] hover:rounded-2xl hover:scale-[1.075] transition-all duration-3"
+        class="PfpImg border-8 hover:border-0 border-violet-400 rounded-[1rem_50%_50%_1rem] hover:rounded-2xl hover:scale-[1.075] transition-all duration-3"
       />
       <div class="info px-5 w-fit text-[0.95rem]">
         <p class="title">🦊 ~Dumb fox makes code go nyoom~ 🦊</p>
@@ -57,24 +57,27 @@
 <script setup lang="ts">
 import { ISDiscord } from './Icons/Solid'
 </script>
+
 <style scoped lang="scss">
 .PfpImg {
   display: none;
-  &.out {
+}
+:not(.introCard) {
+  > .PfpImg {
     @media (max-width: 666px) {
       display: block;
       max-width: 50%;
       margin-left: 25%;
     }
   }
-  &.in {
+}
+.introCard {
+  height: fit-content;
+  > .PfpImg {
     @media (min-width: 667px) {
       display: block;
       height: 11rem;
     }
   }
-}
-.introBox {
-  height: fit-content;
 }
 </style>
