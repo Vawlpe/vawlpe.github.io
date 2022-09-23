@@ -30,7 +30,7 @@
             &&
             <NuxtLink
               class="text-violet-400 hover:text-xl transition-all duration-3"
-              to="https://github.com/Vawlpe/QuickImGui.NET"
+              to="https://github.com/Vawlpe/PemsaDebugger"
               >PEMSA Debugger</NuxtLink
             >
           </li>

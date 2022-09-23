@@ -1,3 +1,5 @@
+.vscode/
+yarn.lock
 node_modules
 *.log*
 .nuxt
@@ -6,4 +8,4 @@ node_modules
 .output
 .env
 dist
-components/Icon*
+components/Icons/**

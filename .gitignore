@@ -1,3 +1,5 @@
+.vscode/
+yarn.lock
 node_modules
 *.log*
 .nuxt
