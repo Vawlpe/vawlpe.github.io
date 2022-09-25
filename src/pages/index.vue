@@ -33,10 +33,16 @@
     <hr class="mt-3" />
     <section class="mb-20 projects flex flex-col items-center">
       <h2 class="text-3xl pt-6 pb-1">Projects</h2>
-      <Carousel dir="ltr" :items-to-show="carouselIts()" class="my-4 w-full">
-        <Slide
+      <Carousel
+        :items-count="projects.length"
+        :items-to-show="mqSm ? 1 : mqMd ? 2 : 3"
+        :items-to-scroll="mqSm ? 1 : mqMd ? 2 : 3"
+        wrap
+      >
+        <li
           v-for="p in projects"
-          :key="p.name ? p.name : projDefault.name"
+          :key="p.name ? p.name : Math.floor(+new Date() / 1000)"
+          class="slide"
           :style="{
             color: p.tc ? p.tc : projDefault.tc,
             backgroundImage: p.bgi ? p.bgi : projDefault.bgi,
@@ -71,28 +77,15 @@
               />
             </NuxtLink>
           </div>
-        </Slide>
-        <template #addons>
-          <Navigation />
-          <Pagination />
-        </template>
+        </li>
       </Carousel>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import { ISGithub, IS3Dot } from '~~/components/Icons/Solid'
-
-const carouselIts = () =>
-  useMediaQuery('(max-width: 666px)')
-    ? 1
-    : useMediaQuery('(max-width: 1150px)')
-    ? 2
-    : 3
-
+const mqSm = useMediaQuery('(max-width: 666px)')
+const mqMd = useMediaQuery('(max-width: 1150px)')
 const projDefault = {
   name: 'NAME',
   desc: 'DESCRIPTION',
@@ -147,33 +140,38 @@ const projects: {
 </script>
 
 <style scoped lang="scss">
-.carousel__slide {
-  margin: 0 1rem 0 0;
-  height: 20rem;
-  border-width: 0.6rem;
-  border-color: #ffffff2f #0000002f #0000002f #ffffff2f;
-  border-radius: 2%;
-  flex-direction: row;
-  align-items: flex-start;
-  background-color: #e2e8f0;
-  background-repeat: no-repeat;
-  transition: all;
-  transition-duration: 300ms;
-  &:hover {
-    scale: 1.04;
+.carousel {
+  width: calc(100% - 7.25rem);
+  > .viewport > .track > .slide {
+    position: relative;
+    text-align: center;
+    margin: 0 1rem 0 0;
+    height: 20rem;
+    border-width: 0.6rem;
+    border-color: #ffffff2f #0000002f #0000002f #ffffff2f;
+    border-radius: 2%;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #e2e8f0;
+    background-repeat: no-repeat;
+    transition: all;
+    transition-duration: 300ms;
+    &:hover {
+      scale: 1.04;
+    }
+    @media (min-width: 1151px) {
+      width: 33% !important;
+    }
+    @media (max-width: 1150px) {
+      width: 50% !important;
+    }
+    @media (max-width: 666px) {
+      width: 100% !important;
+    }
+    .dark & {
+      background-color: #1e293b;
+    }
   }
-  @media (min-width: 1151px) {
-    width: 33% !important;
-  }
-  @media (max-width: 1150px) {
-    width: 50% !important;
-  }
-  @media (max-width: 666px) {
-    width: 100% !important;
-  }
-}
-.dark .carousel__slide {
-  background-color: #1e293b;
 }
 .content {
   @media (max-width: 1150px) {
