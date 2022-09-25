@@ -1,10 +1,10 @@
 <template>
   <div
-    class="contribCard px-5 rounded-2xl bg-slate-200 dark:bg-slate-800 w-full hover:scale-105 transition-all duration-3 overflow-hidden"
+    class="contribCard rounded-2xl bg-slate-200 dark:bg-slate-800 w-full hover:scale-105 transition-all duration-3 overflow-hidden"
   >
     <p class="flex flex-col items-center text-3xl mr-6">Contributions</p>
     <div
-      class="grid grid-cols-4 justify-items-center items-center content-center pl-7"
+      class="grid grid-cols-4 justify-items-center items-center content-center"
     >
       <NuxtLink to="https://www.monogame.net/" target="_blank"
         ><IconsSolidMonogame

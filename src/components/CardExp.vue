@@ -1,6 +1,6 @@
 <template>
   <div
-    class="expCard px-5 rounded-2xl bg-slate-200 dark:bg-slate-800 w-full hover:scale-105 transition-all duration-300 overflow-hidden"
+    class="expCard rounded-2xl bg-slate-200 dark:bg-slate-800 w-full hover:scale-105 transition-all duration-300 overflow-hidden"
   >
     <p class="flex flex-col items-center text-3xl mr-6">Experience</p>
     <div

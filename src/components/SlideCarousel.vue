@@ -81,6 +81,7 @@ const movePrev = () => {
       height: 100%;
       align-items: center;
       > .slide {
+        min-width: 13.25rem;
         flex: 1;
         height: 100%;
       }

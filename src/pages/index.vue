@@ -33,7 +33,7 @@
     <hr class="mt-3" />
     <section class="mb-20 projects flex flex-col items-center">
       <h2 class="text-3xl pt-6 pb-1">Projects</h2>
-      <Carousel
+      <SlideCarousel
         :items-count="projects.length"
         :items-to-show="mqSm ? 1 : mqMd ? 2 : 3"
         :items-to-scroll="mqSm ? 1 : mqMd ? 2 : 3"
@@ -41,7 +41,7 @@
       >
         <li
           v-for="p in projects"
-          :key="p.name ? p.name : Math.floor(+new Date() / 1000)"
+          :key="projects.indexOf(p)"
           class="slide"
           :style="{
             color: p.tc ? p.tc : projDefault.tc,
@@ -51,34 +51,30 @@
           }"
         >
           <div>
-            <p class="text-5xl pt-5">{{ p.name }}</p>
-            <p class="text-lg pt-5">{{ p.desc }}</p>
+            <p class="text-3xl sm:text-5xl pt-5">{{ p.name ? p.name : '' }}</p>
+            <p class="text-lg pt-5">{{ p.desc ? p.desc : '' }}</p>
           </div>
           <div
             class="flex flex-row absolute bottom-8 justify-evenly items-center w-full"
           >
             <NuxtLink
-              v-if="p.links.length > 0"
-              :to="p.links[0]"
-              target="_blank"
-            >
-              <IconsSolidGithub
-                class="w-12 hover:text-violet-400 hover:scale-[110%] transition-all duration-300"
-              />
-            </NuxtLink>
-            <NuxtLink
-              v-for="l in p.links.slice(1)"
+              v-for="l in p.links ? p.links : projDefault.links"
               :key="l"
               :to="l"
               target="_blank"
             >
+              <IconsSolidGithub
+                v-if="l.startsWith('https://github.com/')"
+                class="w-12 hover:text-violet-400 hover:scale-[110%] transition-all duration-300"
+              />
               <IconsSolid3Dot
+                v-else
                 class="w-12 hover:text-violet-400 hover:scale-[110%] transition-all duration-300"
               />
             </NuxtLink>
           </div>
         </li>
-      </Carousel>
+      </SlideCarousel>
     </section>
   </div>
 </template>
@@ -87,8 +83,6 @@
 const mqSm = useMediaQuery('(max-width: 666px)')
 const mqMd = useMediaQuery('(max-width: 1150px)')
 const projDefault = {
-  name: 'NAME',
-  desc: 'DESCRIPTION',
   bgi: '',
   bgs: 'cover',
   bgp: 'center',
@@ -119,6 +113,7 @@ const projects: {
     ],
   },
   {
+    name: ' ',
     bgi: 'url(/qimguin.png)',
     bgs: 'contain',
     bgp: 'center top',
@@ -139,9 +134,13 @@ const projects: {
 ]
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .carousel {
-  width: calc(100% - 7.25rem);
+  width: 100%;
+  margin-left: 1rem;
+  @media (min-width: 666px) {
+    width: calc(100% - 6.25rem);
+  }
   > .viewport > .track > .slide {
     position: relative;
     text-align: center;
@@ -159,17 +158,18 @@ const projects: {
     &:hover {
       scale: 1.04;
     }
-    @media (min-width: 1151px) {
-      width: 33% !important;
-    }
-    @media (max-width: 1150px) {
-      width: 50% !important;
-    }
-    @media (max-width: 666px) {
-      width: 100% !important;
-    }
     .dark & {
       background-color: #1e293b;
+    }
+  }
+  @media (max-width: 666px) {
+    > .nav {
+      &.prev {
+        left: 0;
+      }
+      &.next {
+        right: 1rem;
+      }
     }
   }
 }
