@@ -46,7 +46,7 @@
         <div
           class="discord flex flex-row bg-blue-500 rounded-2xl border-2 border-blue-700 pl-2 mb-1 h-7 text-sm w-36"
         >
-          <ISDiscord class="w-6" />
+          <IconsSolidDiscord class="w-6" />
           <p class="pl-2 pt-[0.125rem]"><code>Vawlpe#0116</code></p>
         </div>
       </div>
@@ -54,9 +54,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ISDiscord } from './Icons/Solid'
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 .PfpImg {

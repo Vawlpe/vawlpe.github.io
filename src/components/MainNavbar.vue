@@ -7,7 +7,7 @@
         class="nav-item flex flex-row flex-[0.65] items-center text-4xl font-mono font-black text-violet-400 dark:text-amber-200 hover:scale-110 transition-all duration-300"
       >
         <NuxtLink to="/" class="flex flex-row items-center">
-          <ISTerminal class="w-16 text-emerald-500" />
+          <IconsSolidTerminal class="w-16 text-emerald-500" />
           Vawlpe
         </NuxtLink>
       </li>
@@ -18,29 +18,29 @@
           class="d-icon hover:text-violet-400 hover:scale-110 transition-all duration-300 mx-2"
           @click="toggleTheme"
         >
-          <ISMoon v-if="colorMode.preference == 'light'" />
-          <ISSun v-else />
+          <IconsSolidMoon v-if="colorMode.preference == 'light'" />
+          <IconsSolidSun v-else />
         </button>
         <NuxtLink
           to="https://github.com/Vawlpe/vawlpe.github.io/"
           target="_blank"
           class="d-icon hover:text-violet-400 hover:scale-110 transition-all duration-300 w-6 max-w-6"
         >
-          <ISGithub />
+          <IconsSolidGithub />
         </NuxtLink>
         <NuxtLink
           to="https://www.linkedin.com/in/david-imre-a20301234/"
           target="_blank"
           class="d-icon hover:text-violet-400 hover:scale-110 transition-all duration-300 w-7 max-w-6 ml-2"
         >
-          <ISLinkedIn />
+          <IconsSolidLinkedIn />
         </NuxtLink>
         <NuxtLink
           to="https://stackoverflow.com/users/11878103/vawlpe"
           target="_blank"
           class="d-icon hover:text-violet-400 hover:scale-110 transition-all duration-300 w-5 max-w-5 ml-1"
         >
-          <ISStackOverflow />
+          <IconsSolidStackOverflow />
         </NuxtLink>
       </li>
     </ul>
@@ -48,15 +48,6 @@
 </template>
 
 <script setup lang="ts">
-import {
-  ISTerminal,
-  ISMoon,
-  ISSun,
-  ISGithub,
-  ISLinkedIn,
-  ISStackOverflow,
-} from '@/components/Icons/Solid'
-
 const colorMode = useColorMode()
 if (colorMode.preference === 'system') colorMode.preference = colorMode.value
 

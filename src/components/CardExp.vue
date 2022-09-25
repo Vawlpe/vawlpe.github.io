@@ -6,126 +6,93 @@
     <div
       class="grid grid-cols-4 sm:grid-cols-7 gap-x-8 justify-items-start items-center content-center pl-3"
     >
-      <ISJavascript
+      <IconsSolidJavascript
         class="w-[3.8rem] pt-[0.65rem] hover:text-yellow-300 hover:scale-110 transition-all duration-3"
       />
-      <ISDotnet
+      <IconsSolidDotnet
         class="w-[5rem] hover:text-purple-400 hover:scale-110 transition-all duration-3 -translate-x-[0.75rem]"
       />
-      <ISVue
+      <IconsSolidVue
         class="w-[3.2rem] hover:text-green-400 hover:scale-110 transition-all duration-3 translate-x-2"
       />
-      <ISGit
+      <IconsSolidGit
         class="w-[3rem] hover:text-red-400 hover:scale-110 transition-all duration-3 translate-x-2"
       />
-      <ISDocker
+      <IconsSolidDocker
         class="w-[6rem] hover:text-blue-400 hover:scale-110 transition-all duration-3 -translate-x-3"
       />
-      <ISPython
+      <IconsSolidPython
         class="w-[3rem] hover:text-yellow-400 hover:scale-110 transition-all duration-3 translate-x-2"
       />
-      <ISHaskell
+      <IconsSolidHaskell
         class="w-[5rem] hover:text-purple-400 hover:scale-110 transition-all duration-3 -translate-x-4"
       />
 
-      <ISTypescript
+      <IconsSolidTypescript
         class="w-[3.2rem] pt-2 hover:text-blue-400 hover:scale-110 transition-all duration-3"
       />
-      <ISCSharp
+      <IconsSolidCSharp
         class="w-[3.8rem] pt-2 hover:text-purple-400 hover:scale-110 transition-all duration-3"
       />
-      <ISNuxt
+      <IconsSolidNuxt
         class="w-[3.8rem] pt-2 hover:text-green-400 hover:scale-110 transition-all duration-3"
       />
-      <ISLinux
+      <IconsSolidLinux
         class="w-[3.8rem] pt-2 hover:scale-110 transition-all duration-3"
       />
-      <ISKubernetes
+      <IconsSolidKubernetes
         class="w-[3.8rem] pt-2 hover:text-blue-400 hover:scale-110 transition-all duration-3"
       />
-      <ISLua
+      <IconsSolidLua
         class="w-[3.8rem] pt-2 hover:text-blue-400 hover:scale-110 transition-all duration-3"
       />
-      <ISNodeJS
+      <IconsSolidNodeJS
         class="w-[3rem] pt-2 hover:text-green-500 hover:scale-110 transition-all duration-3"
       />
 
-      <ISWASM
+      <IconsSolidWASM
         class="w-[3.2rem] py-[0.65rem] hover:text-purple-400 hover:scale-110 transition-all duration-3"
       />
-      <ISHTML
+      <IconsSolidHTML
         class="w-[3.8rem] py-[0.65rem] hover:text-red-400 hover:scale-110 transition-all duration-3"
       />
-      <ISCSS
+      <IconsSolidCSS
         class="w-[3.2rem] ml-1 py-[0.65rem] hover:text-blue-400 hover:scale-110 transition-all duration-3"
       />
-      <ISSass
+      <IconsSolidSass
         class="w-[3.5rem] ml-2 pt-2 hover:text-pink-400 hover:scale-110 transition-all duration-3"
       />
-      <ISTailwind
+      <IconsSolidTailwind
         class="w-[3.8rem] mr-2 pt-2 hover:text-cyan-400 hover:scale-110 transition-all duration-3"
       />
-      <ISPrisma
+      <IconsSolidPrisma
         class="w-[2.8rem] py-[0.65rem] ml-2 hover:scale-[110%] transition-all duration-3"
       />
-      <ISGraphQL
+      <IconsSolidGraphQL
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-pink-400 hover:scale-110 transition-all duration-3"
       />
 
-      <ISSQL
+      <IconsSolidSQL
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:scale-110 transition-all duration-3"
       />
-      <ISMongoDB
+      <IconsSolidMongoDB
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-green-400 hover:scale-110 transition-all duration-3"
       />
-      <ISPostgreSQL
+      <IconsSolidPostgreSQL
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-blue-400 hover:scale-110 transition-all duration-3"
       />
-      <ISBash
+      <IconsSolidBash
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:scale-110 transition-all duration-3 grayscale hover:grayscale-0"
       />
-      <ISGhidra
+      <IconsSolidGhidra
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-red-500 hover:scale-110 transition-all duration-3 grayscale hover:grayscale-0"
       />
-      <ISVSCode
+      <IconsSolidVSCode
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-blue-500 hover:scale-110 transition-all duration-3"
       />
-      <ISGodot
+      <IconsSolidGodot
         class="w-[3.5rem] py-[0.65rem] mr-4 hover:text-blue-400 hover:scale-110 transition-all duration-3"
       />
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import {
-  ISJavascript,
-  ISDotnet,
-  ISVue,
-  ISGit,
-  ISDocker,
-  ISPython,
-  ISHaskell,
-  ISTypescript,
-  ISCSharp,
-  ISNuxt,
-  ISLinux,
-  ISKubernetes,
-  ISLua,
-  ISNodeJS,
-  ISWASM,
-  ISHTML,
-  ISCSS,
-  ISSass,
-  ISTailwind,
-  ISPrisma,
-  ISGraphQL,
-  ISSQL,
-  ISMongoDB,
-  ISPostgreSQL,
-  ISBash,
-  ISGhidra,
-  ISVSCode,
-  ISGodot,
-} from '@/components/Icons/Solid'
-</script>

@@ -56,7 +56,7 @@
               :to="p.links[0]"
               target="_blank"
             >
-              <ISGithub
+              <IconsSolidGithub
                 class="w-12 hover:text-violet-400 hover:scale-[110%] transition-all duration-300"
               />
             </NuxtLink>
@@ -66,7 +66,7 @@
               :to="l"
               target="_blank"
             >
-              <IS3Dot
+              <IconsSolid3Dot
                 class="w-12 hover:text-violet-400 hover:scale-[110%] transition-all duration-300"
               />
             </NuxtLink>
