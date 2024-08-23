@@ -14,8 +14,8 @@
       <div class="info px-5 w-fit text-[0.95rem]">
         <p class="title">🦊 ~Dumb fox makes code go nyoom~ 🦊</p>
         <ol class="list-disc pl-2 pr-1">
-          <li><code>var hazel = [17, 'she/they', 'Romania 🇷🇴']</code></li>
-          <li>3+ years freelance full-stack software development 💻🌀</li>
+          <li><code>var hazel = [19, 'she/they', 'Romania 🇷🇴']</code></li>
+          <li>6+ years freelance full-stack software engineering 💻🌀</li>
           <li>
             Trans rights are human rights 💖🏳️‍⚧️ <code>&&</code> I use Arch btw
             💪🐧
